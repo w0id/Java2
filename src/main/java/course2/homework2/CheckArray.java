@@ -2,18 +2,21 @@ package course2.homework2;
 
 public class CheckArray {
 
-    private Integer[][] array;
+    private static Integer sum = 0;
 
-    public CheckArray(Integer[][] array) {
-        this.array = array;
-    }
-
-    void Check() {
+    public static Integer GetSum(String[][] array) throws MyArraySizeException, MyArrayDataException {
         for (int i = 0; i < array.length; i++) {
+            if (array[i].length != 4 || array.length != 4) {
+                throw new MyArraySizeException();
+            }
             for (int j = 0; j < array[i].length; j++) {
-                int cell = array[i][j];
-                System.out.println(cell);
+                try {
+                    sum += Integer.parseInt(array[i][j]);
+                } catch (NumberFormatException e) {
+                    throw new MyArrayDataException(i, j, e);
+                }
             }
         }
+        return sum;
     }
 }
