@@ -2,9 +2,9 @@ package course2.homework2;
 
 public class CheckArray {
 
-    private static Integer sum = 0;
+    private Integer sum = 0;
 
-    public static Integer GetSum(String[][] array) throws MyArraySizeException, MyArrayDataException {
+    public Integer getSum(String[][] array) throws MyArraySizeException, MyArrayDataException {
         for (int i = 0; i < array.length; i++) {
             if (array[i].length != 4 || array.length != 4) {
                 throw new MyArraySizeException();

@@ -10,8 +10,9 @@ public class App {
                 {"13","14","15","16"}
 //                {"13","14","15","16", "17"}
         };
+
         try {
-            System.out.println(CheckArray.GetSum(array));
+            System.out.println(new CheckArray().getSum(array));
         } catch (MyArraySizeException | MyArrayDataException e) {
             e.printStackTrace();
         }
