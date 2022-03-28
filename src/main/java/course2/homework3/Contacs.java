@@ -8,9 +8,9 @@ import java.util.stream.Collectors;
 
 public class Contacs {
 
-    private static Map<String, String> contacts = new HashMap<String, String>();
+    private Map<String, String> contacts = new HashMap<String, String>();
 
-    public static Set<String> get(String value) {
+    public Set<String> get(String value) {
         return contacts.entrySet()
                 .stream()
                 .filter(entry -> Objects.equals(entry.getValue(), value))
@@ -18,7 +18,7 @@ public class Contacs {
                 .collect(Collectors.toSet());
     }
 
-    public static void add(String name, String phone) {
+    public void add(String name, String phone) {
         contacts.put(phone, name);
     }
 }
