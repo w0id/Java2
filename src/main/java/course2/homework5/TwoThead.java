@@ -2,6 +2,9 @@ package course2.homework5;
 
 import java.util.stream.IntStream;
 
+import static java.lang.Math.cos;
+import static java.lang.Math.sin;
+
 public class TwoThead {
 
     private final int HALF;
@@ -37,10 +40,7 @@ public class TwoThead {
 
     public void calc(float[] inputArray) {
         IntStream.range(0, inputArray.length)
-                .forEach(i -> inputArray[i] = (float) (inputArray[i] * Math
-                        .sin(0.2f + i / 5) * Math
-                        .cos(0.2f + i / 5) * Math
-                        .cos(0.4f + i / 2)));
+                .forEach(i -> inputArray[i] = (float) (inputArray[i] * sin(0.2f + i / 5) * cos(0.2f + i / 5) * cos(0.4f + i / 2)));
     }
 
 }
