@@ -1,2 +1,3 @@
 /.idea/
-/src/main/java/course2/homework1/
+*.iml
+/target/
